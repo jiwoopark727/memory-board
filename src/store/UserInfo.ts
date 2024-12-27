@@ -6,6 +6,8 @@ interface Memo {
   memo_id: string;
   locate_idx: number;
   bg_num: number;
+  author: string;
+  content: string;
 }
 
 interface UserInfoState {

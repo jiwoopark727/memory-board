@@ -14,7 +14,7 @@ interface MemoResponse {
 }
 
 const useMemoValid = () => {
-  const apiUrl = '/api';
+  const apiUrl = import.meta.env.VITE_API_URL;
 	const navigate = useNavigate();
 	const signUp = async (
     id: string,

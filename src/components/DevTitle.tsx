@@ -14,7 +14,7 @@ const DevTitle: React.FC = () => {
 };
 
 const Header = styled.div`
-  margin: 25px 100px 15px 100px;
+  margin: 50px 100px 50px 100px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -32,7 +32,7 @@ const Subtitle = styled.p`
 
 const Sticker = styled.img`
   position: absolute;
-  top: -10px; /* 적절히 조정 */
+  top: -25px; /* 적절히 조정 */
   left: -30px; /* 적절히 조정 */
   width: 40px; /* 이미지 크기 조정 */
   height: auto;

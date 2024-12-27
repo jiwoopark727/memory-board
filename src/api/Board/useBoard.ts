@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import useUserInfo from '../../store/UserInfo';
 
 const useBoard = () => {
-  const apiUrl = '/api';
+  const apiUrl = import.meta.env.VITE_API_URL;
   const cookies = new Cookies();
   const { setBgNum, setBoardName, setIsSelf, setMemoList } = useUserInfo();
   const { id } = useParams<{ id: string }>();

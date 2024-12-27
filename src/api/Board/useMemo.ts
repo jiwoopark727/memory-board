@@ -10,7 +10,7 @@ interface MemoRequest {
 }
 
 const useMemo = () => {
-  const apiUrl = '/api';
+  const apiUrl = import.meta.env.VITE_API_URL;
   const navigate = useNavigate();
   const { bg_memo, author, content } = useUserInfo();
   const { id } = useParams<{ id: string }>();

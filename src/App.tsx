@@ -28,9 +28,9 @@ function App(): JSX.Element {
     { path: '/signup', element: <SignUpPage /> },
     { path: '/share', element: <SharePage /> },
     { path: '/board/create', element: <CreatePage /> },
-    { path: `/board/:id`, element: <MyPage/> },
-    { path: `/board/memo/create/:id`, element: <CreateMemoPage />},
-    { path: `/board/memo/select/:id`, element: <SelectMemoPage />},
+    { path: `/board/:id`, element: <MyPage /> },
+    { path: `/board/memo/create/:id`, element: <CreateMemoPage /> },
+    { path: `/board/memo/select/:id`, element: <SelectMemoPage /> },
     { path: `/dev`, element: <DevPage /> },
   ];
 
@@ -55,11 +55,15 @@ function App(): JSX.Element {
     </ThemeProvider>
   );
 }
-
 const Container = styled.div`
-  width: 390px;
-  height: 844px;
+  width: 100vw; /* 전체 화면 너비 */
+  height: 100vh; /* 전체 화면 높이 */
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  overflow: auto; /* 스크롤 허용 */
+  padding: env(safe-area-inset-top, 0) env(safe-area-inset-right, 0)
+    env(safe-area-inset-bottom, 0) env(safe-area-inset-left, 0); /* Safe Area 대응 */
 `;
 
 export default App;
