@@ -15,11 +15,17 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100%;
+    height: 100%; /* 화면 전체를 차지 */
+    overflow: hidden; /* 스크롤 방지 */
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased; /* 텍스트 부드럽게 렌더링 */
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%; /* 모바일 확대 방지 */
+  }
+
+  #root {
+    width: 100%; /* 전체 너비 */
+    height: 100%; /* 전체 높이 */
   }
 
   * {
@@ -32,21 +38,6 @@ const GlobalStyle = createGlobalStyle`
   input, textarea, button {
     font-family: 'SejongGeulggot', Arial, sans-serif;
     font-size: 16px;
-  }
-
-  /* 4. 기타 기본 스타일 초기화 */
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'SejongGeulggot', Arial, sans-serif;
-    margin: 0;
-  }
-
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-
-  ul, li {
-    list-style: none;
   }
 `;
 

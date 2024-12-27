@@ -58,12 +58,6 @@ function App(): JSX.Element {
 const Container = styled.div`
   width: 100vw; /* 전체 화면 너비 */
   height: 100vh; /* 전체 화면 높이 */
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  overflow: auto; /* 스크롤 허용 */
-  padding: env(safe-area-inset-top, 0) env(safe-area-inset-right, 0)
-    env(safe-area-inset-bottom, 0) env(safe-area-inset-left, 0); /* Safe Area 대응 */
 `;
 
 export default App;

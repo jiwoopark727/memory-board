@@ -52,7 +52,7 @@ const CreateContainer = styled.div<{ $background: string }>`
   flex-direction: column;
   color: white;
   background-image: url(${(props) => props.$background});
-  background-size: cover;
+  background-size: 100% 100%; /* 화면을 꽉 채우기 */
   background-position: center;
   background-repeat: no-repeat;
   position: relative;

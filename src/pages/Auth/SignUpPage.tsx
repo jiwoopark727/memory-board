@@ -28,7 +28,7 @@ const SignUpContainer = styled.div`
   color: white;
 
   background-image: url(${bg0});
-  background-size: cover;
+  background-size: 100% 100%; /* 화면을 꽉 채우기 */
   background-position: center;
   background-repeat: no-repeat;
 `;

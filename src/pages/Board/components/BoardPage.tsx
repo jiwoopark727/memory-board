@@ -27,10 +27,7 @@ interface Memo {
   author: string;
 }
 
-const BoardPage: React.FC<BoardPageProps> = ({
-  onSubmit,
-  onAddButtonClick,
-}) => {
+const BoardPage: React.FC<BoardPageProps> = ({ onSubmit, onAddButtonClick}) => {
   const { board_name, bg_num, memo_list } = useUserInfo();
   const location = useLocation();
   const navigate = useNavigate();
@@ -85,9 +82,7 @@ const BoardPage: React.FC<BoardPageProps> = ({
           {board_name} 님의 <span style={{ color: 'green' }}>추억 칠판</span>
         </BoardHeader>
       )}
-      {isCreatePage ? (
-        <></>
-      ) : (
+      {! isCreatePage && (
         <MemoGrid>
           {Array.from({ length: 20 }).map((_, idx) => {
             const memo = memo_list?.find((m) => m.locate_idx === idx);
@@ -137,7 +132,7 @@ const BoardContainer = styled.div<{ $background: string }>`
   display: flex;
   flex-direction: column;
   background-image: url(${(props) => props.$background});
-  background-size: cover;
+  background-size: 100% 100%; /* 화면을 꽉 채우기 */
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
@@ -182,28 +177,28 @@ const SubmitButton = styled.div`
 
 const MemoGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-
-  padding: 30px 15px 0px 15px;
+  grid-template-columns: repeat(4, 1fr); /* 한 행에 4개의 메모 */
+  gap: 3vw; /* 간격을 vw 단위로 조정 */
+  padding: 3vw; /* 상하좌우에 여백 추가 */
+  box-sizing: border-box; /* 패딩 포함 */
 `;
 
 const MemoSlot = styled.div`
-  width: 80px;
-  height: 80px;
+  width: 20vw; /* 화면 너비의 20% */
+  height: 20vw; /* 정사각형 비율 유지 */
   display: flex;
   align-items: center;
   justify-content: center;
 `;
 
 const Memo = styled.div<{ $background: string }>`
-  width: 70px;
-  height: 70px;
+  width: 90%; /* MemoSlot 크기의 90% */
+  height: 90%; /* MemoSlot 크기의 90% */
   background-image: url(${(props) => props.$background});
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 5px;
+  border-radius: 8px;
 `;
 
 const AddButton = styled.button`

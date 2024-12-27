@@ -55,8 +55,8 @@ const CreateContainer = styled.div`
   position: relative;
 `;
 
+
 const BoardFooter = styled.div`
-  height: 200px;
   width: 100%;
   background: #013c24;
   border-top-left-radius: 28px;
@@ -67,6 +67,11 @@ const BoardFooter = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 19px;
-  color: white;
+  
+  /* 화면 높이에 따라 동적 크기 조정 */
+  height: 20vh; /* 화면 높이의 15% */
+  min-height: 130px; /* 최소 높이는 100px */
+
+  /* 하단 안전 영역을 고려 */
+  padding-bottom: env(safe-area-inset-bottom, 10px);
 `;

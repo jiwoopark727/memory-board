@@ -12,6 +12,7 @@ const MyPage = () => {
   const navigate = useNavigate();
   const cookies = new Cookies();
   const board = useBoard();
+
   const loadBoardData = async () => {
     try {
       const data = await board();
@@ -72,7 +73,6 @@ const BoardContainer = styled.div`
 `;
 
 const BoardFooter = styled.div`
-  height: 200px;
   width: 100%;
   background: #013c24;
   border-top-left-radius: 28px;
@@ -83,14 +83,22 @@ const BoardFooter = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
+  /* 화면 높이에 따라 동적 크기 조정 */
+  height: 20vh; /* 화면 높이의 15% */
+  min-height: 130px; /* 최소 높이는 100px */
+
+  /* 하단 안전 영역을 고려 */
+  padding-bottom: env(safe-area-inset-bottom, 10px);
 `;
 
 const StyledButton = styled.button`
-  width: 247px;
-  height: 57px;
-  font-size: 19px;
-  border-radius: 20px;
-  margin: 10px;
+  width: 80%;
+  max-width: 300px;
+  height: 50px;
+  font-size: 16px;
+  border-radius: 10px;
+  margin: 5px 0;
   color: #013c24;
   background: white;
   border: none;
