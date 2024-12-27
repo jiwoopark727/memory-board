@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import useUserInfo from '../../store/UserInfo';
 
 declare global {
   interface Window {
@@ -7,6 +8,8 @@ declare global {
 }
 
 const useKakao = () => {
+  const { id } = useUserInfo();
+
   useEffect(() => {
     const loadKakaoSDK = () => {
       if (!window.Kakao) {
@@ -14,7 +17,7 @@ const useKakao = () => {
         return;
       }
       if (!window.Kakao.isInitialized()) {
-        window.Kakao.init('3316792d09958ac7dd7f5e5046f30715');
+        window.Kakao.init(import.meta.env.VITE_KAKAO_API_KEY);
         console.log('Kakao SDK 초기화 여부 : ', window.Kakao.isInitialized());
       }
     };
@@ -43,8 +46,8 @@ const useKakao = () => {
         imageUrl:
           'https://postfiles.pstatic.net/MjAyNDEyMjRfMzgg/MDAxNzM1MDQxMDg3Mzc2.Va74Q2iOvLEZ3DXQ-BQb4-T5vU5t0u9UShDupZ3LABkg.4ItUMG1kG_d4KMhgL7pFQCSBKGHjGPogYqCKsguOh7Ag.PNG/%EC%B6%94%EC%96%B5%EC%9D%98%EC%B9%A0%ED%8C%902.png?type=w773',
         link: {
-          mobileWebUrl: '',
-          webUrl: '',
+          mobileWebUrl: `https://memory-boards.vercel.app/board/${id}`,
+          webUrl: `https://memory-boards.vercel.app/board/${id}`,
         },
       },
     });
