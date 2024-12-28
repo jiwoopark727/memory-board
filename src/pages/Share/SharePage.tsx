@@ -33,6 +33,10 @@ const SharePage: React.FC = () => {
 
   const instagramShare = useInstagram();
 
+  const handleInstagramShare = () => {
+    instagramShare(`https://memory-boards.vercel.app/board/${id}`);
+  };
+
   return (
     <ShareContainer>
       <Title />
@@ -42,7 +46,7 @@ const SharePage: React.FC = () => {
         <SubmitButton
           variant='contained'
           type='button'
-          onClick={instagramShare}
+          onClick={handleInstagramShare}
         >
           <Icon src={instagramIcon} alt='Instagram Icon' />
           인스타그램으로 공유
