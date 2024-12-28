@@ -34,8 +34,6 @@ function App(): JSX.Element {
     { path: `/dev`, element: <DevPage /> },
   ];
 
-  
-
   // 동적 높이 업데이트 함수
   useEffect(() => {
     const isIOS = (): boolean => {
@@ -62,11 +60,7 @@ function App(): JSX.Element {
           route.private ? (
             <Route key={route.path} path={route.path} />
           ) : (
-            <Route
-              key={route.path}
-              path={route.path}
-              element={route.element}
-            />
+            <Route key={route.path} path={route.path} element={route.element} />
           )
         )}
       </Routes>
