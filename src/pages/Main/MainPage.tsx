@@ -37,7 +37,7 @@ const MainPage: React.FC = () => {
 
 // Styled Components
 const MainContainer = styled.div`
-  height: 100vh; /* 화면 높이를 꽉 채움 */
+  height: 100dvh; /* 화면 높이를 꽉 채움 */
   width: 100vw; /* 화면 너비를 꽉 채움 */
   display: flex;
   flex-direction: column;
@@ -45,7 +45,7 @@ const MainContainer = styled.div`
   color: white;
 
   background-image: url(${bg0});
-  background-size: cover; /* 화면을 꽉 채우기 */
+  background-size: 100% 100%; /* 화면을 꽉 채우기 */
   background-position: center; /* 이미지를 중앙에 위치 */
   background-repeat: no-repeat; /* 이미지 반복 방지 */
 `;

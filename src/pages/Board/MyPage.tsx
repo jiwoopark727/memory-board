@@ -65,7 +65,8 @@ export default MyPage;
 
 // Styled Components
 const BoardContainer = styled.div`
-  height: 100%;
+  height: 100dvh; /* 화면 높이를 꽉 채움 */
+  width: 100vw; /* 화면 너비를 꽉 채움 */
   display: flex;
   flex-direction: column;
   align-items: center;

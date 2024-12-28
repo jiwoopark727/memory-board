@@ -84,7 +84,7 @@ const BoardPage: React.FC<BoardPageProps> = ({ onSubmit, onAddButtonClick}) => {
       )}
       {! isCreatePage && (
         <MemoGrid>
-          {Array.from({ length: 20 }).map((_, idx) => {
+          {Array.from({ length: 16 }).map((_, idx) => {
             const memo = memo_list?.find((m) => m.locate_idx === idx);
             return (
               <MemoSlot key={memo?.memo_id || idx}>

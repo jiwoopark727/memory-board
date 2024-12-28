@@ -14,8 +14,6 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'SejongGeulggot', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%; /* 화면 전체를 차지 */
     overflow: hidden; /* 스크롤 방지 */
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased; /* 텍스트 부드럽게 렌더링 */
@@ -24,8 +22,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   #root {
-    width: 100%; /* 전체 너비 */
-    height: 100%; /* 전체 높이 */
+    width: 100vw; /* 전체 화면 너비 */
+    height: -webkit-fill-available;
   }
 
   * {

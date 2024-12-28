@@ -62,7 +62,7 @@ const SharePage: React.FC = () => {
 
 // Styled Components
 const ShareContainer = styled.div`
-  height: 100%;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;

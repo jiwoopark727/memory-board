@@ -18,7 +18,10 @@ const useGetMemo = () => {
 
     try {
       const response = await axios.get(`${apiUrl}/memo/${memo_id}`, {
-        params: { memo_id, token },
+        headers: {
+          token: token || '', // token 헤더에 토큰 추가
+        },
+        params: { memo_id }, // 필요 시 추가 파라미터
       });
 
       const { author, content } = response.data.data;

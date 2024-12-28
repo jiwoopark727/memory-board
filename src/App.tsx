@@ -1,5 +1,4 @@
 import { Routes, Route } from 'react-router-dom';
-import styled from 'styled-components';
 import { ThemeProvider } from '@mui/material';
 import GlobalStyle from './utils/GlobalStyles';
 import theme from './utils/theme';
@@ -37,27 +36,21 @@ function App(): JSX.Element {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Container>
-        <Routes>
-          {routes.map((route) =>
-            route.private ? (
-              <Route key={route.path} path={route.path} />
-            ) : (
-              <Route
-                key={route.path}
-                path={route.path}
-                element={route.element}
-              />
-            )
-          )}
-        </Routes>
-      </Container>
+      <Routes>
+        {routes.map((route) =>
+          route.private ? (
+            <Route key={route.path} path={route.path} />
+          ) : (
+            <Route
+              key={route.path}
+              path={route.path}
+              element={route.element}
+            />
+          )
+        )}
+      </Routes>
     </ThemeProvider>
   );
 }
-const Container = styled.div`
-  width: 100vw; /* 전체 화면 너비 */
-  height: 100vh; /* 전체 화면 높이 */
-`;
 
 export default App;
