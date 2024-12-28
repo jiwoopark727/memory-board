@@ -34,11 +34,18 @@ function App(): JSX.Element {
     { path: `/dev`, element: <DevPage /> },
   ];
 
+  
+
   // 동적 높이 업데이트 함수
   useEffect(() => {
+    const isIOS = (): boolean => {
+      // 'MSStream' 타입 가드로 확인
+      const hasMSStream = typeof window !== 'undefined' && 'MSStream' in window;
+      return /iPad|iPhone|iPod/.test(navigator.userAgent) && !hasMSStream;
+    };
+
     const updateHeight = () => {
-      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-      const appHeight = isIOS ? '100dvh' : `${window.innerHeight}px`;
+      const appHeight = isIOS() ? '100dvh' : `${window.innerHeight}px`;
       document.documentElement.style.setProperty('--app-height', appHeight);
     };
 
