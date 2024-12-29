@@ -16,7 +16,7 @@ const useInstagram = () => {
 
     console.log(shareUrl);
 
-    const instagramUrl = `instagram-stories://share?source_application=${encodeURIComponent(
+    const instagramUrl = `instagram-stories://app?source_application=${encodeURIComponent(
       import.meta.env.VITE_META_KEY
     )}&background_color=${encodeURIComponent(
       backgroundColor
