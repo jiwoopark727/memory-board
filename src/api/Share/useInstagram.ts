@@ -10,14 +10,13 @@ const useInstagram = () => {
   };
 
   const instagram = (shareUrl: string) => {
-    // const appId = 564797589773857;
     // const stickerUrl =
     //   'https://postfiles.pstatic.net/MjAyNDEyMjRfMzgg/MDAxNzM1MDQxMDg3Mzc2.Va74Q2iOvLEZ3DXQ-BQb4-T5vU5t0u9UShDupZ3LABkg.4ItUMG1kG_d4KMhgL7pFQCSBKGHjGPogYqCKsguOh7Ag.PNG/%EC%B6%94%EC%96%B5%EC%9D%98%EC%B9%A0%ED%8C%902.png?type=w773';
     // const backgroundColor = '#FFFFFF';
 
     console.log(shareUrl);
 
-    const instagramUrl = `instagram-stories://share?source_application=${
+    const instagramUrl = `instagram://share?source_application=${
       import.meta.env.VITE_META_API
     }`;
 
