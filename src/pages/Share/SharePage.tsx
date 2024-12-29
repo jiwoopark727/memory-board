@@ -66,7 +66,11 @@ const SharePage: React.FC = () => {
           <Icon src={kakaotalkIcon} alt='Kakaotalk Icon' />
           카카오톡으로 공유
         </SubmitButton>
-        <SubmitButton variant='contained' type='button' onClick={handleCopyLink}>
+        <SubmitButton
+          variant='contained'
+          type='button'
+          onClick={handleCopyLink}
+        >
           링크 복사하기
         </SubmitButton>
         <SubmitButton variant='contained' type='button' onClick={handleSubmit}>
