@@ -17,7 +17,7 @@ const useInstagram = () => {
 
     console.log(shareUrl);
 
-    const instagramUrl = `instagram://app?source_application=${encodeURIComponent(
+    const instagramUrl = `instagram://camera?source_application=${encodeURIComponent(
       import.meta.env.VITE_META_KEY
     )}&background_color=${encodeURIComponent(
       backgroundColor
@@ -26,10 +26,8 @@ const useInstagram = () => {
     // 링크 클립보드 복사
     handleCopyLink(shareUrl);
 
-    // 모바일 환경에서 URL로 이동 1초 지연을 줘서 복사한 내용 살리기
-    setTimeout(() => {
-      window.location.href = instagramUrl;
-    }, 1000);
+    // 모바일 환경에서 앱 열기
+    window.location.href = instagramUrl;
   };
 
   return instagram;
