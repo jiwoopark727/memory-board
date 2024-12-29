@@ -10,18 +10,12 @@ const GlobalStyle = createGlobalStyle`
     font-style: normal;
   }
 
-  :root {
-    --app-height: 100vh;
-  }
-
-
   html, body {
     font-family: 'SejongGeulggot', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    height: var(--app-height); /* 동적 높이 적용 */
-    min-height: 100vh; /* 고정된 최소 높이 */
     width: 100%;
+    height: 100dvh;
     overflow: hidden; /* 스크롤 방지 */
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
@@ -33,12 +27,11 @@ const GlobalStyle = createGlobalStyle`
 
   #root {
     display: flex;
-    min-height: 100vh; /* 고정된 최소 높이 */
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%; /* 동적 높이 */
+    width: 100vw;
+    height: 100dvh; /* 동적 높이 */
     overflow: hidden; /* 내부 스크롤 방지 */
   }
 

@@ -13,6 +13,7 @@ const Title: React.FC = () => {
       <MainTitle to='/'>
         <WhiteText>추억의</WhiteText> <HighlightText>칠판</HighlightText>
       </MainTitle>
+
     </Header>
   );
 };
@@ -55,5 +56,6 @@ const Sticker = styled.img`
   width: 40px; /* 이미지 크기 조정 */
   height: auto;
 `;
+
 
 export default Title;

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Button } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import bg0 from '../../assets/background/bg-0.png';
 import Title from '../../components/Title';
 
@@ -15,6 +15,10 @@ const MainPage: React.FC = () => {
   return (
     <MainContainer>
       <Title />
+      <BetaTestNotice>
+        2025년 1월 5일까지 진행되는 베타테스트입니다 :)<br />
+        정식 버전으로 곧 다시 찾아뵐게요. 감사합니다!
+      </BetaTestNotice>
       <Footer>
         <SubmitButton
           variant='contained'
@@ -31,6 +35,7 @@ const MainPage: React.FC = () => {
           칠판 확인하기
         </SubmitButton>
       </Footer>
+      <StyledLink to='/dev'>개발자 소개 보러가기</StyledLink>
     </MainContainer>
   );
 };
@@ -68,6 +73,21 @@ const SubmitButton = styled(Button)`
     padding: 10px;
     text-transform: none;
   }
+`;
+
+
+const BetaTestNotice = styled.div`
+  font-size: 14px;
+  color: white; /* 흰색 텍스트 */
+  margin-top: 20px;
+  line-height: 1.5;
+  text-align: center;
+`;
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  margin: 20px 5px;
+  color: white;
 `;
 
 export default MainPage;

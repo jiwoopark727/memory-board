@@ -1,7 +1,5 @@
-import { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material';
-import GlobalStyle from './utils/GlobalStyles';
 import theme from './utils/theme';
 
 //Pages
@@ -14,6 +12,8 @@ import MyPage from './pages/Board/MyPage';
 import CreateMemoPage from './pages/Board/CreateMemoPage';
 import SelectMemoPage from './pages/Board/SelectMemoPage';
 import DevPage from './pages/Dev/DevPage';
+import GlobalStyle from './utils/GlobalStyles';
+import { useEffect } from 'react';
 
 interface RouteConfig {
   element: JSX.Element;
@@ -21,7 +21,8 @@ interface RouteConfig {
   private?: boolean;
 }
 
-function App(): JSX.Element {
+function App(){
+
   const routes: RouteConfig[] = [
     { path: '/', element: <MainPage /> },
     { path: '/login', element: <LoginPage /> },
@@ -33,23 +34,9 @@ function App(): JSX.Element {
     { path: `/board/memo/select/:id`, element: <SelectMemoPage /> },
     { path: `/dev`, element: <DevPage /> },
   ];
-
-  // 동적 높이 업데이트 함수
-  useEffect(() => {
-    const isIOS = (): boolean => {
-      // 'MSStream' 타입 가드로 확인
-      const hasMSStream = typeof window !== 'undefined' && 'MSStream' in window;
-      return /iPad|iPhone|iPod/.test(navigator.userAgent) && !hasMSStream;
-    };
-
-    const updateHeight = () => {
-      const appHeight = isIOS() ? '100dvh' : `${window.innerHeight}px`;
-      document.documentElement.style.setProperty('--app-height', appHeight);
-    };
-
-    updateHeight();
-    window.addEventListener('resize', updateHeight);
-    return () => window.removeEventListener('resize', updateHeight);
+  useEffect(()=>{
+    document.body.style.margin = '0';
+    document.body.style.padding = '0';
   }, []);
 
   return (

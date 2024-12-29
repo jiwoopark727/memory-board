@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Button, TextField } from "@mui/material";
 import useSignUp from "../../../api/Auth/useSignUp";
-import DatePicker from "react-datepicker";
+//import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import useUserInfo from '../../../store/UserInfo';
 
@@ -10,17 +10,19 @@ const SignUpForm: React.FC = () => {
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [graduationDate, setGraduationDate] = useState<Date | null>(new Date());
+  //const [graduationDate, setGraduationDate] = useState<Date | null>(new Date());
   const [signUpError, setSignUpError] = useState("");
-  const { setBoardName, setPassword: setStorePassword, setGraduatedAt } = useUserInfo();
+  const { setBoardName, setPassword: setStorePassword, graduated_at, setGraduatedAt } = useUserInfo();
   const signUp = useSignUp();
 
+  /*
   const handleDateChange = (date: Date | null) => {
     if (date) setGraduationDate(date);
   };
-
+  */
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     setSignUpError(""); 
     if (!id){
       setSignUpError("닉네임을 입력해주세요");
@@ -32,21 +34,21 @@ const SignUpForm: React.FC = () => {
     else if (confirmPassword!=password) {
       setSignUpError("비밀번호가 일치하지 않습니다")
     }
+    /*
     else if (!graduationDate) {
       setSignUpError("졸업 날짜를 선택해주세요!");
       return;
     }
+    */
     else{
       try{
 
+        setGraduatedAt("2025-01-01");
         setBoardName(id);
         setStorePassword(password);
-        setGraduatedAt(graduationDate.toISOString().split('T')[0]);
-
-        console.log('데이터 저장 완료:', {id, password, graduationDate});
-
+        //setGraduatedAt(graduationDate.toISOString().split('T')[0]);
+        console.log(id, password, graduated_at);
         await signUp(id, password);
-        console.log(id, password, graduationDate);
       } catch (error) {
         if(error instanceof Error){
           setSignUpError(error.message);
@@ -87,6 +89,7 @@ const SignUpForm: React.FC = () => {
           onChange={(e) => setConfirmPassword(e.target.value)}
         />
       </TextFieldContainer>
+      {/*
       <TextFieldContainer>
         <StyledDatePickerWrapper>
         졸업 날짜:
@@ -98,6 +101,7 @@ const SignUpForm: React.FC = () => {
           />
         </StyledDatePickerWrapper>
       </TextFieldContainer>
+      */}
       <SubmitButton variant="contained" type="submit">
         칠판 만들기
       </SubmitButton>
@@ -156,6 +160,7 @@ const SubmitButton = styled(Button)`
   }
 `;
 
+/*
 const StyledDatePickerWrapper = styled.div`
   .react-datepicker-wrapper {
     width: 100%;
@@ -170,7 +175,7 @@ const StyledDatePickerWrapper = styled.div`
     color: white;
     outline: none;
   }
-`;
+`;*/
 
 const ErrorText = styled.div`
   color: red;

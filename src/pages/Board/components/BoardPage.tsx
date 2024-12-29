@@ -26,9 +26,11 @@ interface Memo {
   content: string;
   author: string;
 }
+const ITEMS_PER_PAGE = 16; // 한 페이지에 표시할 메모 수
+const TOTAL_PAGES = 10; // 총 페이지 수
 
 const BoardPage: React.FC<BoardPageProps> = ({ onSubmit, onAddButtonClick}) => {
-  const { board_name, bg_num, memo_list } = useUserInfo();
+  const { board_name, bg_num, memo_list, is_self } = useUserInfo();
   const location = useLocation();
   const navigate = useNavigate();
   const { getMemo, errorModal, setErrorModal } = useGetMemo();
@@ -38,8 +40,17 @@ const BoardPage: React.FC<BoardPageProps> = ({ onSubmit, onAddButtonClick}) => {
     content: string;
     bgNum?: number;
   } | null>(null);
+  const [currentPage, setCurrentPage] = useState(0); // 현재 페이지 상태
+
+  const totalPages = TOTAL_PAGES; // 총 페이지 수
 
   const handleMemoClick = async (memo_id: string) => {
+    if(!is_self){
+      {
+        setErrorModal("칠판 주인만 열람 가능합니다.");
+        return;
+      }
+    }
     try {
       const data = await getMemo(memo_id);
       if (data) {
@@ -63,6 +74,21 @@ const BoardPage: React.FC<BoardPageProps> = ({ onSubmit, onAddButtonClick}) => {
     return <div>배경 이미지를 로드할 수 없습니다.</div>;
   }
 
+  const startIdx = currentPage * ITEMS_PER_PAGE;
+  const currentPageMemos: Memo[] = Array.from({ length: ITEMS_PER_PAGE }).map((_, idx) => {
+    const locateIdx = startIdx + idx;
+    const memo = memo_list?.find((m) => m.locate_idx === locateIdx);
+    return (
+      memo || {
+        locate_idx: locateIdx,
+        memo_id: '',
+        bg_num: 0,
+        content: '',
+        author: '',
+      }
+    );
+  });
+
   return (
     <BoardContainer $background={backgroundImages[bg_num]?.img || ''}>
       {isCreatePage ? (
@@ -82,40 +108,67 @@ const BoardPage: React.FC<BoardPageProps> = ({ onSubmit, onAddButtonClick}) => {
           {board_name} 님의 <span style={{ color: 'green' }}>추억 칠판</span>
         </BoardHeader>
       )}
-      {! isCreatePage && (
+      {!isCreatePage && (
+        <>
         <MemoGrid>
-          {Array.from({ length: 16 }).map((_, idx) => {
-            const memo = memo_list?.find((m) => m.locate_idx === idx);
-            return (
-              <MemoSlot key={memo?.memo_id || idx}>
-                {memo ? (
-                  <Memo
-                    $background={memoImages[memo.bg_num]?.img}
-                    onClick={() => memo && handleMemoClick(memo.memo_id)} // 클릭 시 팝업 상태 업데이트
-                  />
+          {currentPageMemos.map((memo, idx) => (
+            <MemoSlot key={memo.memo_id || memo.locate_idx || idx}>
+              {memo.memo_id ? (
+                <>
+                {isSelectPage ? (
+                  <>
+                    <Memo
+                      $background={memoImages[memo.bg_num]?.img}
+                      onClick={() => setErrorModal("이미 선점된 자리입니다.")}
+                    />
+                  </>
                 ) : (
                   <>
-                    {isSelectPage ? (
-                      <AddButton onClick={() => onAddButtonClick?.(idx)}>
-                        <AddIcon fontSize='large' />
-                      </AddButton>
-                    ) : (
-                      <></>
-                    )}
+                    <Memo
+                      $background={memoImages[memo.bg_num]?.img}
+                      onClick={() => memo && handleMemoClick(memo.memo_id)}
+                    />
                   </>
-                )}
-              </MemoSlot>
-            );
-          })}
-          <MemoPopup
-            isOpen={!!selectedMemo}
-            memoText={selectedMemo?.content || ''}
-            author={selectedMemo?.author || ''}
-            bgNum={selectedMemo?.bgNum}
-            onClose={() => setSelectedMemo(null)}
-          />
+                )
+
+                }
+                </>
+                
+              ) : (
+                <>
+                  {isSelectPage && (
+                    <AddButton onClick={() => onAddButtonClick?.(memo.locate_idx)}>
+                      <AddIcon fontSize="large" />
+                    </AddButton>
+                  )}
+                </>
+              )}
+            </MemoSlot>
+          ))}
         </MemoGrid>
+        <PaginationControls>
+          <ArrowButton
+            disabled={currentPage === 0}
+            onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 0))}
+          >
+            &lt; 이전
+          </ArrowButton>
+          <ArrowButton
+            disabled={currentPage === totalPages - 1}
+            onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages - 1))}
+          >
+            다음 &gt;
+          </ArrowButton>
+        </PaginationControls>
+      </>
       )}
+      <MemoPopup
+        isOpen={!!selectedMemo}
+        memoText={selectedMemo?.content || ''}
+        author={selectedMemo?.author || ''}
+        bgNum={selectedMemo?.bgNum}
+        onClose={() => setSelectedMemo(null)}
+      />
       {errorModal && (
         <ErrorPopup message={errorModal} onClose={() => setErrorModal(null)} />
       )}
@@ -210,4 +263,26 @@ const AddButton = styled.button`
   width: 90%;
   height: 90%;
   cursor: pointer;
+`;
+
+const PaginationControls = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1vw 3vw;
+`;
+
+const ArrowButton = styled.button`
+  background: #013c24;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5vw 1.5vw;
+  cursor: pointer;
+  font-size: 1rem;
+
+  &:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+  }
 `;
