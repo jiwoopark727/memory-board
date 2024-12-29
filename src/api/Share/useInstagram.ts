@@ -17,17 +17,15 @@ const useInstagram = () => {
 
     console.log(shareUrl);
 
-    // 링크 클립보드 복사
-    handleCopyLink(shareUrl);
-
-    const instagramUrl = `instagram-stories://share?source_application=com.${
+    const instagramUrl = `instagram-stories://share?source_application=${
       import.meta.env.VITE_META_API
     }`;
 
-    // const instagramUrl = `https://www.instagram.com/stories/create/?media_type=image&source_application=${appId}`;
-
     // 모바일 환경에서 URL로 이동
     window.location.href = instagramUrl;
+
+    // 링크 클립보드 복사
+    handleCopyLink(shareUrl);
   };
 
   return instagram;
