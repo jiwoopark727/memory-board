@@ -16,7 +16,8 @@ const MainPage: React.FC = () => {
     <MainContainer>
       <Title />
       <BetaTestNotice>
-        2025년 1월 5일까지 진행되는 베타테스트입니다 :)<br />
+        2025년 1월 5일까지 진행되는 베타테스트입니다 :)
+        <br />
         정식 버전으로 곧 다시 찾아뵐게요. 감사합니다!
       </BetaTestNotice>
       <Footer>
@@ -35,6 +36,7 @@ const MainPage: React.FC = () => {
           칠판 확인하기
         </SubmitButton>
       </Footer>
+      <StyledLink to='/menual'>서비스 사용법 알아보기</StyledLink>
       <StyledLink to='/dev'>개발자 소개 보러가기</StyledLink>
     </MainContainer>
   );
@@ -75,7 +77,6 @@ const SubmitButton = styled(Button)`
   }
 `;
 
-
 const BetaTestNotice = styled.div`
   font-size: 14px;
   color: white; /* 흰색 텍스트 */
@@ -86,7 +87,7 @@ const BetaTestNotice = styled.div`
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-  margin: 20px 5px;
+  margin: 20px 5px 5px 5px;
   color: white;
 `;
 
