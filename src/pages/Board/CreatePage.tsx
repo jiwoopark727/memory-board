@@ -14,10 +14,11 @@ const CreatePage = () => {
 
   const sliderSettings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
+    swipeToSlide: true,
   };
 
   const handleSubmit = async () => {
@@ -53,7 +54,7 @@ const CreateContainer = styled.div<{ $background: string }>`
   flex-direction: column;
   color: white;
   background-image: url(${(props) => props.$background});
-  background-size: 100% 100%; /* 화면을 꽉 채우기 */ 
+  background-size: 100% 100%; /* 화면을 꽉 채우기 */
 
   background-position: center;
   background-repeat: no-repeat;
