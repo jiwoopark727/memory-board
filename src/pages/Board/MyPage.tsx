@@ -84,10 +84,8 @@ const BoardFooter = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
-  /* 화면 높이에 따라 동적 크기 조정 */
-  height: 20vh; /* 화면 높이의 15% */
-  min-height: 130px; /* 최소 높이는 100px */
+
+  height: 150px;
 
   /* 하단 안전 영역을 고려 */
   padding-bottom: env(safe-area-inset-bottom, 10px);

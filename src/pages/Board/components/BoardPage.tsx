@@ -316,6 +316,9 @@ const PaginationControls = styled.div`
   justify-content: space-between;
   width: 100%;
   padding: 1vw 3vw;
+  margin-bottom: 150px;
+  bottom: 0;
+  position: absolute;
 `;
 
 const PaginationIndicators = styled.div`

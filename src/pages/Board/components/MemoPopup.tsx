@@ -62,10 +62,17 @@ const PopupContainer = styled.div<{ $background: string }>`
   text-align: center;
   width: 350px;
   height: 350px;
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: absolute;
+  top: 120px;
+  @media (max-width: 450px) or (max-height: 650px) {
+    padding: 10px;
+    width: 300px;
+    height: 300px;
+    top: 90px;
+  }
 `;
 
 const CloseButton = styled.button`

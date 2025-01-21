@@ -116,12 +116,19 @@ const SelectedMemoImageWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  
+
 `;
 
 const SelectedMemoImage = styled.img`
   width: 380px;
   height: 380px;
   border-radius: 12px;
+  @media (max-width: 450px) or (max-height: 650px) {
+    padding: 10px;
+    width: 300px;
+    height: 300px;
+  }
 `;
 
 const BackgroundSlide = styled.div`
