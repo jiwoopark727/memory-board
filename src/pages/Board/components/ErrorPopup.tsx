@@ -10,7 +10,7 @@ const ErrorPopup: React.FC<ErrorPopupProps> = ({ message, onClose }) => {
   return (
     <ErrorPopupContainer>
       <ErrorPopupBox>
-        <CloseButton onClick={onClose}>x</CloseButton>
+        <CloseButton onClick={onClose}>×</CloseButton>
         <ErrorMessage>{message}</ErrorMessage>
       </ErrorPopupBox>
     </ErrorPopupContainer>
@@ -19,6 +19,7 @@ const ErrorPopup: React.FC<ErrorPopupProps> = ({ message, onClose }) => {
 
 export default ErrorPopup;
 
+// Styled Components
 const ErrorPopupContainer = styled.div`
   position: fixed;
   top: 0;
@@ -29,29 +30,34 @@ const ErrorPopupContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1000; /* 항상 최상단에 표시 */
 `;
 
 const ErrorPopupBox = styled.div`
   background-color: white;
   width: 70%;
-  height: 20%;
+  max-width: 400px;
   padding: 20px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 30px;
+  border-radius: 20px;
   text-align: center;
-  position: absolute;
+  position: relative; /* CloseButton의 위치 조정을 위해 relative 설정 */
 `;
 
 const CloseButton = styled.div`
-  position: relative;
-  font-size: 30px;
-  top: -20px;
-  right: -115px;
+  position: absolute;
+  top: 10px; /* 팝업 박스의 상단으로부터 10px */
+  right: 10px; /* 팝업 박스의 우측으로부터 10px */
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
   cursor: pointer;
-  padding-bottom: 20px;
+  &:hover {
+    color: #000;
+  }
 `;
 
 const ErrorMessage = styled.p`
   font-size: 18px;
+  color: #555;
+  margin-top: 20px;
 `;

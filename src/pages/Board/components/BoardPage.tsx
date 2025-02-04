@@ -249,7 +249,7 @@ const BoardPageNum = styled.div`
 const BoardHeader = styled.div`
   height: 57px;
   width: 356px;
-  background: white;
+  background-color : rgb(255,255,255,0.5);
   margin: 17px;
   border-radius: 20px;
   text-align: center;
