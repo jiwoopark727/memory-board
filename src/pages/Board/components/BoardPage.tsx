@@ -229,17 +229,22 @@ const BoardContainer = styled.div<{ $background: string }>`
   align-items: center;
 `;
 
-const BoardPageContainer = styled.div``;
+const BoardPageContainer = styled.div`  
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 가로 중앙 정렬 */
+  justify-content: center; /* 세로 중앙 정렬 */
+  width: 100%;
+  `;
 
 const BoardPageNum = styled.div`
   text-align: center;
   font-size: 17px;
-  
   margin-bottom: 5px;
   background: #ffffff;
   border-radius: 28px;
   width: 70px;
-  justify-self: center;
+  box-sizing: border-box;
 `;
 
 const BoardHeader = styled.div`
