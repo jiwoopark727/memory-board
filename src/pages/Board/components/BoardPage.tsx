@@ -225,7 +225,6 @@ const BoardContainer = styled.div<{ $background: string }>`
   background-size: 100% 100%; /* 화면을 꽉 채우기 */
   background-position: center;
   background-repeat: no-repeat;
-  margin-bottom: 150px;
   align-items: center;
 `;
 
@@ -364,5 +363,5 @@ const SlideWrapper = styled.div`
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: calc(100vh - 200px);
+  height: 100%;
 `;

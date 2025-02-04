@@ -75,7 +75,8 @@ const BoardContainer = styled.div`
 
 const BoardFooter = styled.div`
   width: 100%;
-  background: #013c24;
+  background-color : rgb(0,0,0,0.5);
+
   border-top-left-radius: 28px;
   border-top-right-radius: 28px;
   position: absolute;
@@ -87,8 +88,6 @@ const BoardFooter = styled.div`
 
   height: 150px;
 
-  /* 하단 안전 영역을 고려 */
-  padding-bottom: env(safe-area-inset-bottom, 10px);
 `;
 
 const StyledButton = styled.button`
