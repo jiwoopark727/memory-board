@@ -225,7 +225,7 @@ const BoardContainer = styled.div<{ $background: string }>`
   background-size: 100% 100%; /* 화면을 꽉 채우기 */
   background-position: center;
   background-repeat: no-repeat;
-  position: relative;
+  margin-bottom: 150px;
   align-items: center;
 `;
 
@@ -233,8 +233,13 @@ const BoardPageContainer = styled.div``;
 
 const BoardPageNum = styled.div`
   text-align: center;
-  font-size: 17x;
+  font-size: 17px;
+  
   margin-bottom: 5px;
+  background: #ffffff;
+  border-radius: 28px;
+  width: 70px;
+  justify-self: center;
 `;
 
 const BoardHeader = styled.div`
@@ -279,6 +284,7 @@ const MemoGrid = styled.div`
   gap: 3vw; /* 간격을 vw 단위로 조정 */
   padding: 3vw; /* 상하좌우에 여백 추가 */
   box-sizing: border-box; /* 패딩 포함 */
+  
 `;
 
 const MemoSlot = styled.div`
@@ -353,5 +359,5 @@ const SlideWrapper = styled.div`
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 600px;
+  height: calc(100vh - 200px);
 `;
