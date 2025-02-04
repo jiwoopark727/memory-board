@@ -71,7 +71,7 @@ const PopupContainer = styled.div<{ $background: string }>`
     padding: 10px;
     width: 300px;
     height: 300px;
-    top: 90px;
+    top: 90 px;
   }
 `;
 

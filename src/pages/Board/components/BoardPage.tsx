@@ -132,7 +132,7 @@ const BoardPage: React.FC<BoardPageProps> = ({
           <BoardHeader>
             {board_name} 님의 <span style={{ color: 'green' }}>추억 칠판</span>
           </BoardHeader>
-          <BoardPageNum>칠판 {currentPage + 1}</BoardPageNum>
+          <BoardPageNum>{currentPage + 1} / 10</BoardPageNum>
         </BoardPageContainer>
       )}
 
@@ -353,5 +353,5 @@ const SlideWrapper = styled.div`
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 400px;
+  height: 600px;
 `;
