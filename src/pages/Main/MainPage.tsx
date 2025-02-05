@@ -38,12 +38,10 @@ const MainPage: React.FC = () => {
       </Footer>
       <StyledLink to='/menual'>서비스 사용법 알아보기</StyledLink>
       <StyledLink to='/dev'>개발자 소개 보러가기</StyledLink>
-      <StyledLink2 to='/mail'>
-        💡궁금한 점이 있다면?
-        <br />
-        <br />
+      <StyledLink2 to='/mail'>💡궁금한 점이 있다면?</StyledLink2>
+      <StyledLink3 to='/mail'>
         문의 메일: dldlsrb1414@gmail.com <br />
-      </StyledLink2>
+      </StyledLink3>
     </MainContainer>
   );
 };
@@ -103,6 +101,12 @@ const StyledLink2 = styled(Link)`
   color: white;
   text-align: center;
   padding-top: 10px;
+`;
+
+const StyledLink3 = styled(Link)`
+  text-decoration: none;
+  color: white;
+  text-align: center;
 `;
 
 export default MainPage;
