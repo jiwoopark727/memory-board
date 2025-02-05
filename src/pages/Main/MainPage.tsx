@@ -37,7 +37,17 @@ const MainPage: React.FC = () => {
         </SubmitButton>
       </Footer>
       <StyledLink to='/menual'>서비스 사용법 알아보기</StyledLink>
-      <StyledLink to='/dev'>개발자 소개 보러가기</StyledLink>
+      <StyledLink to='/dev'>
+        개발자 소개 보러가기
+        <br />
+        <br />
+      </StyledLink>
+      <StyledLink to='/mail'>
+        💡궁금한 점이 있다면?
+        <br />
+        <br />
+        문의 메일: dldlsrb1414@gmail.com <br />
+      </StyledLink>
     </MainContainer>
   );
 };
@@ -89,6 +99,7 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   margin: 20px 5px 5px 5px;
   color: white;
+  text-align: center;
 `;
 
 export default MainPage;
