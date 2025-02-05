@@ -15,11 +15,11 @@ const MainPage: React.FC = () => {
   return (
     <MainContainer>
       <Title />
-      <BetaTestNotice>
+      {/* <BetaTestNotice>
         2025년 1월 5일까지 진행되는 베타테스트입니다 :)
         <br />
         정식 버전으로 곧 다시 찾아뵐게요. 감사합니다!
-      </BetaTestNotice>
+      </BetaTestNotice> */}
       <Footer>
         <SubmitButton
           variant='contained'
@@ -37,17 +37,13 @@ const MainPage: React.FC = () => {
         </SubmitButton>
       </Footer>
       <StyledLink to='/menual'>서비스 사용법 알아보기</StyledLink>
-      <StyledLink to='/dev'>
-        개발자 소개 보러가기
-        <br />
-        <br />
-      </StyledLink>
-      <StyledLink to='/mail'>
+      <StyledLink to='/dev'>개발자 소개 보러가기</StyledLink>
+      <StyledLink2 to='/mail'>
         💡궁금한 점이 있다면?
         <br />
         <br />
         문의 메일: dldlsrb1414@gmail.com <br />
-      </StyledLink>
+      </StyledLink2>
     </MainContainer>
   );
 };
@@ -70,7 +66,7 @@ const MainContainer = styled.div`
 const Footer = styled.div`
   font-size: 15px;
   text-align: center;
-  margin-top: 20px;
+  padding-bottom: 10px;
 `;
 
 const SubmitButton = styled(Button)`
@@ -87,19 +83,26 @@ const SubmitButton = styled(Button)`
   }
 `;
 
-const BetaTestNotice = styled.div`
-  font-size: 14px;
-  color: white; /* 흰색 텍스트 */
-  margin-top: 20px;
-  line-height: 1.5;
-  text-align: center;
-`;
+// const BetaTestNotice = styled.div`
+//   font-size: 14px;
+//   color: white; /* 흰색 텍스트 */
+//   margin-top: 20px;
+//   line-height: 1.5;
+//   text-align: center;
+// `;
 
 const StyledLink = styled(Link)`
   text-decoration: none;
   margin: 20px 5px 5px 5px;
   color: white;
+`;
+
+const StyledLink2 = styled(Link)`
+  text-decoration: none;
+  margin: 20px 5px 5px 5px;
+  color: white;
   text-align: center;
+  padding-top: 10px;
 `;
 
 export default MainPage;
