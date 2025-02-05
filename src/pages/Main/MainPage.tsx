@@ -36,12 +36,12 @@ const MainPage: React.FC = () => {
           칠판 확인하기
         </SubmitButton>
       </Footer>
-      <StyledLink to='/menual'>서비스 사용법 알아보기</StyledLink>
+      <StyledLink to='/manual'>서비스 사용법 알아보기</StyledLink>
       <StyledLink to='/dev'>개발자 소개 보러가기</StyledLink>
-      <StyledLink2 to='/mail'>💡궁금한 점이 있다면?</StyledLink2>
-      <StyledLink3 to='/mail'>
+      <StyledInquiry1>💡궁금한 점이 있다면?</StyledInquiry1>
+      <StyledInquiry2>
         문의 메일: dldlsrb1414@gmail.com <br />
-      </StyledLink3>
+      </StyledInquiry2>
     </MainContainer>
   );
 };
@@ -95,7 +95,7 @@ const StyledLink = styled(Link)`
   color: white;
 `;
 
-const StyledLink2 = styled(Link)`
+const StyledInquiry1 = styled.div`
   text-decoration: none;
   margin: 20px 5px 5px 5px;
   color: white;
@@ -103,7 +103,7 @@ const StyledLink2 = styled(Link)`
   padding-top: 10px;
 `;
 
-const StyledLink3 = styled(Link)`
+const StyledInquiry2 = styled.div`
   text-decoration: none;
   color: white;
   text-align: center;
