@@ -15,6 +15,7 @@ const SignUpPage: React.FC = () => {
           칠판을 확인하고 싶나요? 로그인하러 가기
         </StyledLink>
       </Footer>
+      <StyledLink2 to='/manual'>서비스 사용법 알아보기</StyledLink2>
     </SignUpContainer>
   );
 };
@@ -37,12 +38,17 @@ const SignUpContainer = styled.div`
 const Footer = styled.div`
   font-size: 15px;
   text-align: center;
-  margin-top: 20px;
 `;
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-  margin: 0 5px;
+  margin: 20px 5px 5px 5px;
+  color: white;
+`;
+
+const StyledLink2 = styled(Link)`
+  text-decoration: none;
+  margin: 20px 5px 5px 5px;
   color: white;
 `;
 

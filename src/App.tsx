@@ -33,7 +33,7 @@ function App() {
     { path: `/board/memo/create/:id`, element: <CreateMemoPage /> },
     { path: `/board/memo/select/:id`, element: <SelectMemoPage /> },
     { path: `/dev`, element: <DevPage /> },
-    { path: '/menual', element: <ManualPage /> },
+    { path: '/manual', element: <ManualPage /> },
   ];
   useEffect(() => {
     document.body.style.margin = '0';
