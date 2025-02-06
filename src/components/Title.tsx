@@ -18,7 +18,7 @@ const Title: React.FC = () => {
 };
 
 const Header = styled.div`
-  margin: 100px 100px 35px 100px;
+  margin: 90px 100px 35px 100px;
   text-align: center;
   display: flex;
   flex-direction: column;

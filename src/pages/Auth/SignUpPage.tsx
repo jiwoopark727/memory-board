@@ -8,7 +8,9 @@ import Title from '../../components/Title';
 const SignUpPage: React.FC = () => {
   return (
     <SignUpContainer>
-      <Title />
+      <TitleWrapper>
+        <Title />
+      </TitleWrapper>
       <SignUpForm />
       <Footer>
         <StyledLink to='/login'>
@@ -20,7 +22,11 @@ const SignUpPage: React.FC = () => {
   );
 };
 
-// Styled Components
+const TitleWrapper = styled.div`
+  margin-top: -20px;
+  margin-bottom: -35px;
+`;
+
 const SignUpContainer = styled.div`
   height: 100dvh; /* 화면 높이를 꽉 채움 */
   width: 100vw; /* 화면 너비를 꽉 채움 */
