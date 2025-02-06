@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import SignUpForm from './components/SignUpForm';
@@ -6,6 +6,9 @@ import bg0 from '../../assets/background/bg-0.png';
 import Title from '../../components/Title';
 
 const SignUpPage: React.FC = () => {
+  useEffect(() => {
+    alert('비밀번호 찾기가 불가하니 꼭 기억해주세요!');
+  }, []);
   return (
     <SignUpContainer>
       <TitleWrapper>

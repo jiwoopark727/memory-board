@@ -165,7 +165,7 @@ const PrevButton = styled.button`
 `;
 
 const Footer = styled.div`
-  font-size: 17px;
+  font-size: 16px;
   text-align: center;
   margin-top: 40px;
 `;
