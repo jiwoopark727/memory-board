@@ -39,10 +39,9 @@ const SignUpForm: React.FC = () => {
       return;
     } else {
       try {
-        setGraduatedAt('2025-01-01');
         setBoardName(id);
         setStorePassword(password);
-        //setGraduatedAt(graduationDate.toISOString().split('T')[0]);
+        setGraduatedAt(graduationDate.toISOString().split('T')[0]);
         console.log(id, password, graduated_at);
         await signUp(id, password);
       } catch (error) {

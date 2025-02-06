@@ -16,6 +16,7 @@ interface UserInfoState {
   password: string;
   bg_num: number;
   graduated_at: string;
+  is_graduated: boolean;
   is_self: boolean;
   memo_list: Memo[];
   author: string;
@@ -25,7 +26,8 @@ interface UserInfoState {
   setBoardName: (name: string) => void;
   setPassword: (password: string) => void;
   setBgNum: (newBgNum: number) => void;
-  setGraduatedAt: (date: string) => void; 
+  setGraduatedAt: (date: string) => void;
+  setIsGraduated: (is_graduated: boolean) => void;
   setIsSelf: (is_self: boolean) => void;
   setMemoList: (memo_list: Memo[]) => void;
   setAuthor: (author: string) => void; 
@@ -41,6 +43,7 @@ const useUserInfo = create<UserInfoState>()(
       password: '',
       bg_num: 0,
       graduated_at: '',
+      is_graduated: false,
       is_self: false,
       memo_list: [],
       author: '',
@@ -51,6 +54,7 @@ const useUserInfo = create<UserInfoState>()(
       setPassword: (password) => set(() => ({ password })),
       setBgNum: (newBgNum: number) => set(() => ({ bg_num: newBgNum })),
       setGraduatedAt: (date) => set(() => ({ graduated_at: date })),
+      setIsGraduated: (isGraduated: boolean) => set(() => ({ is_graduated: isGraduated})),
       setIsSelf: (isSelf: boolean) => set(() => ({ is_self: isSelf })),
       setMemoList: (memo_list) => set({ memo_list }),
       setAuthor: (author) => set(() => ({author})),
