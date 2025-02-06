@@ -39,8 +39,6 @@ const LoginForm: React.FC = () => {
     }
   };
 
-  // const { id } = useUserInfo();
-
   return (
     <LoginFormBox onSubmit={handleSubmit}>
       <TextFieldContainer>
@@ -127,17 +125,5 @@ const ErrorText = styled.div`
   margin-top: 8px;
   min-height: 1.2rem;
 `;
-
-<<<<<<< HEAD
-// const StatusText = styled.div`
-//   font-size: 0.875rem;
-//   text-align: left;
-//   margin-top: -10px;
-//   margin-bottom: 10px;
-//   width: 100%;
-//   max-width: 350px;
-// `;
-=======
->>>>>>> aabd12bb218438f5a3157d5f3e0e7240caababcd
 
 export default LoginForm;
