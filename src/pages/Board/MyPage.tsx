@@ -12,6 +12,7 @@ const MyPage = () => {
   const navigate = useNavigate();
   const cookies = new Cookies();
   const board = useBoard();
+
   const loadBoardData = async () => {
     try {
       const data = await board();
@@ -64,7 +65,8 @@ export default MyPage;
 
 // Styled Components
 const BoardContainer = styled.div`
-  height: 100%;
+  height: 100dvh; /* 화면 높이를 꽉 채움 */
+  width: 100vw; /* 화면 너비를 꽉 채움 */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -72,9 +74,9 @@ const BoardContainer = styled.div`
 `;
 
 const BoardFooter = styled.div`
-  height: 200px;
   width: 100%;
-  background: #013c24;
+  background-color : rgb(0,0,0,0.5);
+
   border-top-left-radius: 28px;
   border-top-right-radius: 28px;
   position: absolute;
@@ -83,14 +85,18 @@ const BoardFooter = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  height: 150px;
+
 `;
 
 const StyledButton = styled.button`
-  width: 247px;
-  height: 57px;
-  font-size: 19px;
-  border-radius: 20px;
-  margin: 10px;
+  width: 80%;
+  max-width: 300px;
+  height: 50px;
+  font-size: 16px;
+  border-radius: 10px;
+  margin: 5px 0;
   color: #013c24;
   background: white;
   border: none;

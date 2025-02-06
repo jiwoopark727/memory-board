@@ -49,16 +49,18 @@ const SelectMemoPage = () => {
 export default SelectMemoPage;
 
 const CreateContainer = styled.div`
-  height: 100%;
+  height: 100dvh; /* 화면 높이를 꽉 채움 */
+  width: 100vw; /* 화면 너비를 꽉 채움 */
   display: flex;
   flex-direction: column;
+  align-items: center;
   position: relative;
 `;
 
 const BoardFooter = styled.div`
-  height: 200px;
   width: 100%;
-  background: #013c24;
+  background-color : rgb(0,0,0,0.5);
+
   border-top-left-radius: 28px;
   border-top-right-radius: 28px;
   position: absolute;
@@ -67,6 +69,7 @@ const BoardFooter = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 19px;
+
+  height: 150px;
   color: white;
 `;

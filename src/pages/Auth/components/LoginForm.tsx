@@ -128,6 +128,7 @@ const ErrorText = styled.div`
   min-height: 1.2rem;
 `;
 
+<<<<<<< HEAD
 // const StatusText = styled.div`
 //   font-size: 0.875rem;
 //   text-align: left;
@@ -136,5 +137,7 @@ const ErrorText = styled.div`
 //   width: 100%;
 //   max-width: 350px;
 // `;
+=======
+>>>>>>> aabd12bb218438f5a3157d5f3e0e7240caababcd
 
 export default LoginForm;

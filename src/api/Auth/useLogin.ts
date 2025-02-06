@@ -16,7 +16,7 @@ interface LoginResponse {
 }
 
 const useLogin = () => {
-  const apiUrl = import.meta.env.VITE_API_URL as string;
+  const apiUrl = import.meta.env.VITE_API_URL;
   const cookies = new Cookies();
   const { setID } = useUserInfo();
 

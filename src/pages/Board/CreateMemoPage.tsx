@@ -96,7 +96,8 @@ const CreateMemoPage = () => {
 export default CreateMemoPage;
 
 const CreateContainer = styled.div`
-  height: 100%;
+  height: 100dvh; /* 화면 높이를 꽉 채움 */
+  width: 100vw; /* 화면 너비를 꽉 채움 */
   display: flex;
   flex-direction: column;
   position: relative;
@@ -115,22 +116,26 @@ const SelectedMemoImageWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  
+
 `;
 
 const SelectedMemoImage = styled.img`
   width: 380px;
   height: 380px;
   border-radius: 12px;
+  @media (max-width: 450px) or (max-height: 650px) {
+    padding: 10px;
+    width: 300px;
+    height: 300px;
+  }
 `;
 
 const BackgroundSlide = styled.div`
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 150px;
-  padding-left: 32px;
-  padding-right: 33px;
-  padding-top: 20px;
+  padding: 20px 33px;
   background: rgba(0, 0, 0, 0.6);
 
   .slick-prev {

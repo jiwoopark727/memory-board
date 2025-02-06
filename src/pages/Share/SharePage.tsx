@@ -15,6 +15,7 @@ const SharePage: React.FC = () => {
   const navigate = useNavigate();
   const cookies = new Cookies();
   const { id } = useUserInfo();
+  const boardLink = `https://memory-page.vercel.app/board/${id}`;
   const handleSubmit = async () => {
     const token = cookies.get('access_token');
     if (!token) {
@@ -33,6 +34,20 @@ const SharePage: React.FC = () => {
 
   const instagramShare = useInstagram();
 
+  const handleInstagramShare = () => {
+    instagramShare(boardLink);
+  };
+
+  const handleCopyLink = async () => {
+    try {
+      await navigator.clipboard.writeText(boardLink);
+      alert('링크가 복사되었습니다!');
+    } catch (error) {
+      console.error('링크 복사 중 오류 발생:', error);
+      alert('링크 복사에 실패했습니다.');
+    }
+  };
+
   return (
     <ShareContainer>
       <Title />
@@ -42,7 +57,7 @@ const SharePage: React.FC = () => {
         <SubmitButton
           variant='contained'
           type='button'
-          onClick={instagramShare}
+          onClick={handleInstagramShare}
         >
           <Icon src={instagramIcon} alt='Instagram Icon' />
           인스타그램으로 공유
@@ -50,6 +65,13 @@ const SharePage: React.FC = () => {
         <SubmitButton variant='contained' type='button' onClick={kakaoShare}>
           <Icon src={kakaotalkIcon} alt='Kakaotalk Icon' />
           카카오톡으로 공유
+        </SubmitButton>
+        <SubmitButton
+          variant='contained'
+          type='button'
+          onClick={handleCopyLink}
+        >
+          링크 복사하기
         </SubmitButton>
         <SubmitButton variant='contained' type='button' onClick={handleSubmit}>
           생성된 칠판 보러가기
@@ -62,7 +84,8 @@ const SharePage: React.FC = () => {
 
 // Styled Components
 const ShareContainer = styled.div`
-  height: 100%;
+  height: 100dvh; /* 화면 높이를 꽉 채움 */
+  width: 100vw; /* 화면 너비를 꽉 채움 */
   display: flex;
   flex-direction: column;
   align-items: center;

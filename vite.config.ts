@@ -8,4 +8,20 @@ export default defineConfig({
       '@': '/src', // 예시로 별칭 사용 가능
     },
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "@/styles/variables.scss";`,
+      },
+    },
+  },
+  server: {
+    proxy: {
+      '/board/validate': {
+        target: 'http://220.69.209.126:5012',
+        changeOrigin: true,
+        secure: false,
+      },
+    },
+  },
 });
