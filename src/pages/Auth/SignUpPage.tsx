@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import SignUpForm from './components/SignUpForm';
@@ -6,9 +6,14 @@ import bg0 from '../../assets/background/bg-0.png';
 import Title from '../../components/Title';
 
 const SignUpPage: React.FC = () => {
+  useEffect(() => {
+    alert('비밀번호 찾기가 불가하니 꼭 기억해주세요!');
+  }, []);
   return (
     <SignUpContainer>
-      <Title />
+      <TitleWrapper>
+        <Title />
+      </TitleWrapper>
       <SignUpForm />
       <Footer>
         <StyledLink to='/login'>
@@ -20,7 +25,11 @@ const SignUpPage: React.FC = () => {
   );
 };
 
-// Styled Components
+const TitleWrapper = styled.div`
+  margin-top: -20px;
+  margin-bottom: -35px;
+`;
+
 const SignUpContainer = styled.div`
   height: 100dvh; /* 화면 높이를 꽉 채움 */
   width: 100vw; /* 화면 너비를 꽉 채움 */
