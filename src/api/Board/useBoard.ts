@@ -15,7 +15,7 @@ const useBoard = () => {
       console.error('보드 ID 누락');
       return undefined;
     }
-
+    console.log(token);
     try {
       const response = await axios.get(`${apiUrl}/board/${id}`, {
         headers: {
