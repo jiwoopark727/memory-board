@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import memoImages from '../../../assets/memo';
-import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 
 interface MemoPopupProps {
