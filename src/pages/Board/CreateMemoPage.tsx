@@ -21,7 +21,8 @@ const CreateMemoPage = () => {
 
   const sliderSettings = {
     dots: true,
-    infinite: true,
+    infinite: false,
+    swipeToSlide: true,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
@@ -116,8 +117,6 @@ const SelectedMemoImageWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  
-
 `;
 
 const SelectedMemoImage = styled.img`
