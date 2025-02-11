@@ -8,7 +8,7 @@ declare global {
 }
 
 const useKakao = () => {
-  const { id, board_name } = useUserInfo();
+  const { id } = useUserInfo();
 
   useEffect(() => {
     const loadKakaoSDK = () => {
