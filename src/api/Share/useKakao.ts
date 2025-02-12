@@ -8,7 +8,7 @@ declare global {
 }
 
 const useKakao = () => {
-  const { id } = useUserInfo();
+  const { id, board_name } = useUserInfo();
 
   useEffect(() => {
     const loadKakaoSDK = () => {
@@ -42,9 +42,9 @@ const useKakao = () => {
       objectType: 'feed',
       content: {
         title: '추억의 칠판',
-        description: `한 해를 채운 마음을 칠판 위에 남겨보세요!`,
+        description: `"${board_name}"님의 칠판에 소중한 추억의 롤링페이퍼를 붙여주세요!`,
         imageUrl:
-          'https://postfiles.pstatic.net/MjAyNDEyMjRfMzgg/MDAxNzM1MDQxMDg3Mzc2.Va74Q2iOvLEZ3DXQ-BQb4-T5vU5t0u9UShDupZ3LABkg.4ItUMG1kG_d4KMhgL7pFQCSBKGHjGPogYqCKsguOh7Ag.PNG/%EC%B6%94%EC%96%B5%EC%9D%98%EC%B9%A0%ED%8C%902.png?type=w773',
+          'https://postfiles.pstatic.net/MjAyNTAyMTJfMTU1/MDAxNzM5MzM3MzAxNzA0.ktQLAOrquaIinZg5ywqsQB0I07ZzQw5HJ7BY8NwHZzUg.Y3HVAuihcvmx_6sh1eqkJcKUPsbVkG-1eP81Zn5nKz4g.PNG/%EC%B6%94%EC%96%B5%EC%9D%98%EC%B9%A0%ED%8C%90_%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%86%A1_%EA%B3%B5%EC%9C%A0_%EC%8D%B8%EB%84%A4%EC%9D%BC.png?type=w773',
         link: {
           mobileWebUrl: `https://memory-page.vercel.app/board/${id}`,
           webUrl: `https://memory-page.vercel.app/board/${id}`,
