@@ -29,91 +29,91 @@
   <tr>
     <td align="center">
       <p>초기 화면</p>
-      <img src="./src/assets/readme/home.png" height="300" alt="초기 화면">
+      <img src="./src/assets/readme/home.png" width="250" height='400' alt="초기 화면">
     </td>
         <td align="center">
       <p>개발자 화면</p>
-      <img src="./src/assets/readme/dev.png" height="300" alt="개발자 화면">
+      <img src="./src/assets/readme/dev.png" width="250" height='400' alt="개발자 화면">
     </td>
         <td align="center">
       <p>메뉴얼 화면</p>
-      <img src="./src/assets/readme/manual.png" height="300" alt="메뉴얼 화면">
+      <img src="./src/assets/readme/manual.png" width="250" height='400' alt="메뉴얼 화면">
     </td>
   </tr>
   <tr>
     <td align="center">
       <p>칠판 생성(회원가입) 화면</p>
-      <img src="./src/assets/readme/create.png" height="300" alt="칠판 생성(회원가입) 화면">
+      <img src="./src/assets/readme/create.png" width="250" height='400' alt="칠판 생성(회원가입) 화면">
     </td>
         <td align="center">
       <p>칠판 선택 화면</p>
-      <img src="./src/assets/readme/board_create.png" height="300" alt="칠판 선택 화면">
+      <img src="./src/assets/readme/board_create.png" width="250" height='400' alt="칠판 선택 화면">
     </td>
         <td align="center">
       <p>칠판 생성 완료 화면</p>
-      <img src="./src/assets/readme/board.png" height="300" alt="칠판 생성 완료 화면">
+      <img src="./src/assets/readme/board.png" width="250" height='400' alt="칠판 생성 완료 화면">
     </td>
   </tr>
   <tr>
     <td align="center">
       <p>칠판 공유 화면</p>
-      <img src="./src/assets/readme/share.png" height="300" alt="칠판 공유 화면">
+      <img src="./src/assets/readme/share.png" width="250" height='400' alt="칠판 공유 화면">
     </td>
     <td align="center">
       <p>카카오톡 공유1 화면</p>
-      <img src="./src/assets/readme/kakao_share1.png" height="300" alt="카카오톡 공유1 화면">
+      <img src="./src/assets/readme/kakao_share1.png" width="250" height='400' alt="카카오톡 공유1 화면">
     </td>
         <td align="center">
       <p>카카오톡 공유2 화면</p>
-      <img src="./src/assets/readme/kakao_share2.png" height="300" alt="카카오톡 공유2 화면">
+      <img src="./src/assets/readme/kakao_share2.png" width="250" height='400' alt="카카오톡 공유2 화면">
     </td>
   </tr>
   <tr>
     <td align="center">
       <p>카카오톡 공유3 화면</p>
-      <img src="./src/assets/readme/kakao_share3.png" height="300" alt="카카오톡 공유3 화면">
+      <img src="./src/assets/readme/kakao_share3.png" width="250" height='400' alt="카카오톡 공유3 화면">
     </td>
         <td align="center">
       <p>인스타그램 공유 화면</p>
-      <img src="./src/assets/readme/insta_share.png" height="300" alt="인스타그램 공유 화면">
+      <img src="./src/assets/readme/insta_share.png" width="250" height='400' alt="인스타그램 공유 화면">
     </td>
         <td align="center">
       <p>칠판 확인(로그인) 화면</p>
-      <img src="./src/assets/readme/login.png" height="300" alt="칠판 확인(로그인) 화면">
+      <img src="./src/assets/readme/login.png" width="250" height='400' alt="칠판 확인(로그인) 화면">
     </td>
   </tr>
   <tr>
     <td align="center">
       <p>메모지 생성1 화면</p>
-      <img src="./src/assets/readme/memo_create.png" height="300" alt="메모지 생성1 화면">
+      <img src="./src/assets/readme/memo_create.png" width="250" height='400' alt="메모지 생성1 화면">
     </td>
     <td align="center">
       <p>메모지 생성2 화면</p>
-      <img src="./src/assets/readme/memo_create2.png" height="300" alt="메모지 생성2 화면">
+      <img src="./src/assets/readme/memo_create2.png" width="250" height='400' alt="메모지 생성2 화면">
     </td>
     <td align="center">
       <p>메모지 생성3 화면</p>
-      <img src="./src/assets/readme/memo_create3.png" height="300" alt="메모지 생성3 화면">
+      <img src="./src/assets/readme/memo_create3.png" width="250" height='400' alt="메모지 생성3 화면">
     </td>
   </tr>
   <tr>
     <td align="center">
       <p>메모지 생성4 화면</p>
-      <img src="./src/assets/readme/memo_create4.png" height="300" alt="메모지 생성4 화면">
+      <img src="./src/assets/readme/memo_create4.png" width="250" height='400' alt="메모지 생성4 화면">
     </td>
     <td align="center">
       <p>메모지 확인1 화면</p>
-      <img src="./src/assets/readme/memo1.png" height="300" alt="메모지 확인1 화면">
+      <img src="./src/assets/readme/memo1.png" width="250" height='400' alt="메모지 확인1 화면">
     </td>
     <td align="center">
       <p>메모지 확인2 화면</p>
-      <img src="./src/assets/readme/memo2.png" height="300" alt="메모지 확인2 화면">
+      <img src="./src/assets/readme/memo2.png" width="250" height='400' alt="메모지 확인2 화면">
     </td>
   </tr>
   <tr>
     <td align="center">
       <p>메모지 확인3 화면</p>
-      <img src="./src/assets/readme/memo3.png" height="300" alt="메모지 확인3 화면">
+      <img src="./src/assets/readme/memo3.png" width="250" alt="메모지 확인3 화면">
     </td>
   </tr>  
 </table>
