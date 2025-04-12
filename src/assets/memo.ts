@@ -14,6 +14,7 @@ import memo11 from './memo/memo-11.jpeg';
 import memo12 from './memo/memo-12.jpeg';
 import memo13 from './memo/memo-13.jpeg';
 import memo14 from './memo/memo-14.jpeg';
+import memo15 from './memo/memo-15.jpeg';
 
 const memoImages = [
   { img: memo0, num: 0 },
@@ -31,6 +32,7 @@ const memoImages = [
   { img: memo12, num: 12 },
   { img: memo13, num: 13 },
   { img: memo14, num: 14 },
+  { img: memo15, num: 15 },
 ];
 
 export default memoImages;

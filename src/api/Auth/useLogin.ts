@@ -40,13 +40,13 @@ const useLogin = () => {
 
       // 쿠키에 토큰 저장
       const token = response.data.data.access_token;
+      console.log(token);
       cookies.set('access_token', token, {
         path: '/',
         httpOnly: false,
         secure: true,
         sameSite: 'strict',
       });
-
       console.log('로그인 성공:', response.data.data);
       return response.data; // 반환 타입 맞춤
     } catch (error) {

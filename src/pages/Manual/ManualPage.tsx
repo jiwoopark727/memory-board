@@ -26,7 +26,7 @@ const ManualPage = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
-    beforeChange: (oldIndex: number, newIndex: number) => {
+    beforeChange: (newIndex: number) => {
       setCurrentPage(newIndex);
     },
   };
