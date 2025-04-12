@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import memoImages from '../../../assets/memo';
+import CloseIcon from '@mui/icons-material/Close';
 
 interface MemoPopupProps {
   isOpen: boolean;
@@ -27,7 +28,9 @@ const MemoPopup: React.FC<MemoPopupProps> = ({
         $background={backgroundImage}
         onClick={(e) => e.stopPropagation()}
       >
-        <CloseButton onClick={onClose}>X</CloseButton>
+        <CloseButton onClick={onClose}>
+          <CloseIcon />
+        </CloseButton>
         <MemoContent>{memoText}</MemoContent>
         <MemoAuthor>- {author} -</MemoAuthor>
       </PopupContainer>
@@ -56,26 +59,44 @@ const PopupContainer = styled.div<{ $background: string }>`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  position: relative;
   padding: 20px;
   border-radius: 10px;
   max-width: 400px;
-  text-align: center;
   width: 350px;
   height: 350px;
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    z-index: 1;
+  }
+
+  * {
+    position: relative;
+    z-index: 2;
+  }
 `;
+
 
 const CloseButton = styled.button`
   position: absolute;
-  top: 40px;
-  right: 40px;
+  top: 15px;
+  right: 15px;
   background: none;
   border: none;
   font-size: 18px;
   cursor: pointer;
+  color: #000000;
 `;
 
 const MemoContent = styled.p`
@@ -83,7 +104,7 @@ const MemoContent = styled.p`
   top: 40%;
   width: 80%;
   height: 200px;
-  margin-top: -60px;
+  margin-top: -50px;
   padding: 10px;
   font-size: 16px;
   border: none;
@@ -92,11 +113,12 @@ const MemoContent = styled.p`
   background: rgba(255, 255, 255, 0);
   resize: none;
   text-align: center;
+  color: #000000; /* 대비되는 색상 */
 `;
 
 const MemoAuthor = styled.p`
   position: absolute;
-  bottom: 20px;
+  bottom: 50px;
   width: 50%;
   padding: 8px;
   font-size: 14px;
@@ -105,5 +127,5 @@ const MemoAuthor = styled.p`
   outline: none;
   background: rgba(255, 255, 255, 0);
   text-align: center;
-  color: gray;
+  color: gray; /* 대비되는 색상 */
 `;

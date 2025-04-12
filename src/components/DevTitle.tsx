@@ -1,10 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
 import stickerImg from '../assets/sticker.png';
+import { useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+
+
 
 const DevTitle: React.FC = () => {
+
+  const navigate = useNavigate();
+
+  const handleGoBack = () => {
+    navigate('/'); // 메인 페이지로 리다이렉트
+  };
+
   return (
     <Header>
+      <BackButton onClick={handleGoBack}>
+        <FontAwesomeIcon icon={faArrowLeft} />
+      </BackButton>
       <SubtitleContainer>
         <Sticker src={stickerImg} alt='스티커 이미지' />
         <Subtitle>개발자 소개</Subtitle>
@@ -14,10 +29,25 @@ const DevTitle: React.FC = () => {
 };
 
 const Header = styled.div`
-  margin: 50px 100px 50px 100px;
+  margin: 25px 100px 25px 100px;
   text-align: center;
   display: flex;
   flex-direction: column;
+`;
+
+const BackButton = styled.button`
+  position: absolute;
+  left: 0;
+  margin-left: 30px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+
+  &:hover {
+    color: gray;
+  }
 `;
 
 const SubtitleContainer = styled.div`

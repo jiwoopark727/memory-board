@@ -13,13 +13,12 @@ const Title: React.FC = () => {
       <MainTitle to='/'>
         <WhiteText>추억의</WhiteText> <HighlightText>칠판</HighlightText>
       </MainTitle>
-
     </Header>
   );
 };
 
 const Header = styled.div`
-  margin: 100px 100px 50px 100px;
+  margin: 90px 100px 35px 100px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -56,6 +55,5 @@ const Sticker = styled.img`
   width: 40px; /* 이미지 크기 조정 */
   height: auto;
 `;
-
 
 export default Title;

@@ -75,7 +75,8 @@ const BoardContainer = styled.div`
 
 const BoardFooter = styled.div`
   width: 100%;
-  background: #013c24;
+  background-color : rgb(0,0,0,0.5);
+
   border-top-left-radius: 28px;
   border-top-right-radius: 28px;
   position: absolute;
@@ -84,13 +85,9 @@ const BoardFooter = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
-  /* 화면 높이에 따라 동적 크기 조정 */
-  height: 20vh; /* 화면 높이의 15% */
-  min-height: 130px; /* 최소 높이는 100px */
 
-  /* 하단 안전 영역을 고려 */
-  padding-bottom: env(safe-area-inset-bottom, 10px);
+  height: 150px;
+
 `;
 
 const StyledButton = styled.button`

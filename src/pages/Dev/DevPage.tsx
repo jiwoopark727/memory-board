@@ -176,8 +176,9 @@ const Name = styled.div`
 
 const TextBox = styled.div`
   text-align: center;
-  margin-top: 30px;
+  margin-top: 10px;
   line-height: 2;
+  text-shadow: 2px 2px black;
 `;
 
 const LogoLink = styled.a`

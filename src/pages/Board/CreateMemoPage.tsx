@@ -21,7 +21,8 @@ const CreateMemoPage = () => {
 
   const sliderSettings = {
     dots: true,
-    infinite: true,
+    infinite: false,
+    swipeToSlide: true,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
@@ -122,6 +123,11 @@ const SelectedMemoImage = styled.img`
   width: 380px;
   height: 380px;
   border-radius: 12px;
+  @media (max-width: 450px) or (max-height: 650px) {
+    padding: 10px;
+    width: 350px;
+    height: 350px;
+  }
 `;
 
 const BackgroundSlide = styled.div`
@@ -167,7 +173,7 @@ const MemoTextInput = styled.textarea`
   top: 40%;
   width: 80%;
   height: 200px;
-  margin-top: -60px;
+  margin-top: -50px;
   padding: 10px;
   font-size: 16px;
   border: none;
@@ -180,7 +186,7 @@ const MemoTextInput = styled.textarea`
 
 const NicknameInput = styled.input`
   position: absolute;
-  bottom: 20px;
+  bottom: 50px;
   width: 50%;
   padding: 8px;
   font-size: 14px;

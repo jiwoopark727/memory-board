@@ -14,6 +14,7 @@ import SelectMemoPage from './pages/Board/SelectMemoPage';
 import DevPage from './pages/Dev/DevPage';
 import GlobalStyle from './utils/GlobalStyles';
 import { useEffect } from 'react';
+import ManualPage from './pages/Manual/ManualPage';
 
 interface RouteConfig {
   element: JSX.Element;
@@ -21,8 +22,7 @@ interface RouteConfig {
   private?: boolean;
 }
 
-function App(){
-
+function App() {
   const routes: RouteConfig[] = [
     { path: '/', element: <MainPage /> },
     { path: '/login', element: <LoginPage /> },
@@ -33,8 +33,9 @@ function App(){
     { path: `/board/memo/create/:id`, element: <CreateMemoPage /> },
     { path: `/board/memo/select/:id`, element: <SelectMemoPage /> },
     { path: `/dev`, element: <DevPage /> },
+    { path: '/manual', element: <ManualPage /> },
   ];
-  useEffect(()=>{
+  useEffect(() => {
     document.body.style.margin = '0';
     document.body.style.padding = '0';
   }, []);
