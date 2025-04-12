@@ -2,7 +2,7 @@
 
 ## 🚀 프로젝트 소개
 
-**추억의칠판**은 저희 대학교 학생들이 협업하여 개발한 디지털 롤링페이터 모바일 웹 프로젝트로, 졸업 시즌을 맞아 졸업을 앞둔 사용자들이 각자 자기만의 칠판을 생성하고, 링크를 공유하면 친구들이 해당 칠판에 메모지를 통해 편지를 작성하여 추억을 공유할 수 있습니다.
+**추억의칠판**은 저희 대학교 학생들과 협업하여 개발한 디지털 롤링페이터 모바일 웹 프로젝트로, 졸업 시즌을 맞아 졸업을 앞둔 사용자들이 각자 자기만의 칠판을 생성하고, 링크를 공유하면 친구들이 해당 칠판에 메모지를 통해 편지를 작성하여 추억을 공유할 수 있게 하는 프로젝트입니다.
 
 ## 🎯 주요 기능
 
@@ -33,11 +33,11 @@
   <tr>
     <td align="center">
       <p>일일 칠판 생성 개수</p>
-      <img src="./src/assets/readme/result_chart_board.png" width='350' alt="일일 칠판 생성 개수">
+      <img src="./src/assets/readme/result_chart_board.png" width='380' alt="일일 칠판 생성 개수">
     </td>
     <td align="center">
       <p>일일 메모 생성 개수</p>
-      <img src="./src/assets/readme/result_chart_memo.png" width='350' alt="일일 메모 생성 개수">
+      <img src="./src/assets/readme/result_chart_memo.png" width='380' alt="일일 메모 생성 개수">
     </td>
   </tr> 
 </table>
