@@ -41,11 +41,11 @@
   <tr>
     <td align="center">
       <p>일일 칠판 생성 개수</p>
-      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/result_chart_board.png" width='380' alt="일일 칠판 생성 개수">
+      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/result_chart_board.png" width='430' alt="일일 칠판 생성 개수">
     </td>
     <td align="center">
       <p>일일 메모 생성 개수</p>
-      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/result_chart_memo.png" width='380' alt="일일 메모 생성 개수">
+      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/result_chart_memo.png" width='430' alt="일일 메모 생성 개수">
     </td>
   </tr> 
 </table>
@@ -119,91 +119,91 @@
   <tr>
     <td align="center">
       <p>초기 화면</p>
-      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/home.png" width="240" height='400' alt="초기 화면">
+      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/home.png" width="270" height='430' alt="초기 화면">
     </td>
         <td align="center">
       <p>개발자 화면</p>
-      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/dev.png" width="240" height='400' alt="개발자 화면">
+      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/dev.png" width="270" height='430' alt="개발자 화면">
     </td>
         <td align="center">
       <p>메뉴얼 화면</p>
-      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/manual.png" width="240" height='400' alt="메뉴얼 화면">
+      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/manual.png" width="270" height='430' alt="메뉴얼 화면">
     </td>
   </tr>
   <tr>
     <td align="center">
       <p>칠판 생성(회원가입) 화면</p>
-      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/create.png" width="240" height='400' alt="칠판 생성(회원가입) 화면">
+      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/create.png" width="270" height='430' alt="칠판 생성(회원가입) 화면">
     </td>
         <td align="center">
       <p>칠판 선택 화면</p>
-      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/board_create.png" width="240" height='400' alt="칠판 선택 화면">
+      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/board_create.png" width="270" height='430' alt="칠판 선택 화면">
     </td>
         <td align="center">
       <p>칠판 생성 완료 화면</p>
-      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/board.png" width="240" height='400' alt="칠판 생성 완료 화면">
+      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/board.png" width="270" height='430' alt="칠판 생성 완료 화면">
     </td>
   </tr>
   <tr>
     <td align="center">
       <p>칠판 공유 화면</p>
-      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/share.png" width="240" height='400' alt="칠판 공유 화면">
+      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/share.png" width="270" height='430' alt="칠판 공유 화면">
     </td>
     <td align="center">
       <p>카카오톡 공유1 화면</p>
-      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/kakao_share1.png" width="240" height='400' alt="카카오톡 공유1 화면">
+      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/kakao_share1.png" width="270" height='430' alt="카카오톡 공유1 화면">
     </td>
         <td align="center">
       <p>카카오톡 공유2 화면</p>
-      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/kakao_share2.png" width="240" height='400' alt="카카오톡 공유2 화면">
+      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/kakao_share2.png" width="270" height='430' alt="카카오톡 공유2 화면">
     </td>
   </tr>
   <tr>
     <td align="center">
       <p>카카오톡 공유3 화면</p>
-      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/kakao_share3.png" width="240" height='400' alt="카카오톡 공유3 화면">
+      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/kakao_share3.png" width="270" height='430' alt="카카오톡 공유3 화면">
     </td>
         <td align="center">
       <p>인스타그램 공유 화면</p>
-      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/insta_share.png" width="240" height='400' alt="인스타그램 공유 화면">
+      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/insta_share.png" width="270" height='430' alt="인스타그램 공유 화면">
     </td>
         <td align="center">
       <p>칠판 확인(로그인) 화면</p>
-      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/login.png" width="240" height='400' alt="칠판 확인(로그인) 화면">
+      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/login.png" width="270" height='430' alt="칠판 확인(로그인) 화면">
     </td>
   </tr>
   <tr>
     <td align="center">
       <p>메모지 생성1 화면</p>
-      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/memo_create.png" width="240" height='400' alt="메모지 생성1 화면">
+      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/memo_create.png" width="270" height='430' alt="메모지 생성1 화면">
     </td>
     <td align="center">
       <p>메모지 생성2 화면</p>
-      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/memo_create2.png" width="240" height='400' alt="메모지 생성2 화면">
+      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/memo_create2.png" width="270" height='430' alt="메모지 생성2 화면">
     </td>
     <td align="center">
       <p>메모지 생성3 화면</p>
-      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/memo_create3.png" width="240" height='400' alt="메모지 생성3 화면">
+      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/memo_create3.png" width="270" height='430' alt="메모지 생성3 화면">
     </td>
   </tr>
   <tr>
     <td align="center">
       <p>메모지 생성4 화면</p>
-      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/memo_create4.png" width="240" height='400' alt="메모지 생성4 화면">
+      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/memo_create4.png" width="270" height='430' alt="메모지 생성4 화면">
     </td>
     <td align="center">
       <p>메모지 확인1 화면</p>
-      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/memo1.png" width="240" height='400' alt="메모지 확인1 화면">
+      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/memo1.png" width="270" height='430' alt="메모지 확인1 화면">
     </td>
     <td align="center">
       <p>메모지 확인2 화면</p>
-      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/memo2.png" width="240" height='400' alt="메모지 확인2 화면">
+      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/memo2.png" width="270" height='430' alt="메모지 확인2 화면">
     </td>
   </tr>
   <tr>
     <td align="center">
       <p>메모지 확인3 화면</p>
-      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/memo3.png" width="240" alt="메모지 확인3 화면">
+      <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/memo3.png" width="270" alt="메모지 확인3 화면">
     </td>
   </tr>  
 </table>
