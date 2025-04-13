@@ -113,7 +113,7 @@
 
 ## 🎬 배포 사이트 및 스크린샷
 
-🚀 **[추억의 칠판 배포 사이트](https://memory-page.vercel.app/)**
+🚀 <a href="https://memory-page.vercel.app" target="_blank" rel="noopener noreferrer"><strong>[추억의 칠판 배포 사이트]</strong></a>
 
 <table>
   <tr>
