@@ -154,7 +154,7 @@
       <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/kakao_share1.png" width="270" height='430' alt="카카오톡 공유1 화면">
     </td>
         <td align="center">
-      <p>카카오톡 공유2 화면</p>
+      <p><카카오톡 공유2 화면></p>
       <img src="https://raw.githubusercontent.com/jiwoopark727/memory-board/main/src/assets/readme/kakao_share2.png" width="270" height='430' alt="카카오톡 공유2 화면">
     </td>
   </tr>
